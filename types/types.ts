@@ -5,3 +5,12 @@ export type Task ={
     tag: string;
     date: string;
 };
+
+export type TaskMap = {
+    [key: string]: Task[];
+  };
+
+  export type Board = {
+    columns: TaskMap;
+    ordered: string[];
+  }
