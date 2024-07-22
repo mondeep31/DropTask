@@ -1,4 +1,4 @@
-import { BoardProvider } from "../context/BoardContext/BoardContext";
+import { BoardProvider } from "@/context/BoardContext/BoardContext";
 import "./globals.css";
 
 export default function RootLayout({
