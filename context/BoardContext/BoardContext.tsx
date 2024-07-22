@@ -7,6 +7,7 @@ const boardInitialState: Board = {
   columns: initialState,
   ordered: Object.keys(initialState),
 };
+
 const BoardContext = React.createContext({
   boardState: boardInitialState,
   dispatch: (action: BoardAction) => {},
@@ -17,7 +18,7 @@ export const BoardProvider = ({ children }: React.PropsWithChildren) => {
     boardReducer,
     boardInitialState
   );
-  const [loading, setLoading] = React.useState<boolean>(false);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     loadData();
@@ -25,6 +26,7 @@ export const BoardProvider = ({ children }: React.PropsWithChildren) => {
 
   function loadData() {
     const localBoardData = localStorage.getItem("@Board");
+
     if (localBoardData === null) {
       localStorage.setItem("@Board", JSON.stringify(boardInitialState));
     } else {
@@ -41,6 +43,7 @@ export const BoardProvider = ({ children }: React.PropsWithChildren) => {
     </BoardContext.Provider>
   );
 };
+
 /**
  * custom hook for easy context usage :)
  */
@@ -52,6 +55,7 @@ export function useBoard() {
  * Tasks reducer
  * This function handles actions on the state
  */
+
 function boardReducer(state: Board, action: BoardAction): Board {
   switch (action.type) {
     case "SET_TASKS": {
@@ -94,6 +98,7 @@ function boardReducer(state: Board, action: BoardAction): Board {
         // Exit after handling reordering within the same column
         return newState;
       }
+
       // Handling movement between different columns
       const startTasks = [...state.columns[action.payload.source.droppableId]];
       const finishTasks = [
@@ -131,6 +136,7 @@ function boardReducer(state: Board, action: BoardAction): Board {
       return newState;
     }
     case "REMOVE_TASK": {
+      // I'm sure there is a better way to do this :')
       const taskToRemoveId = action.payload.id;
       const newState = { ...state };
 
