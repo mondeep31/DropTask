@@ -68,20 +68,23 @@ function TaskItem({ isDragging, provided, task }: TaskItemProps) {
                 >
                   Delete <TrashIcon className="h-[1.2rem] w-[1.2rem]" />
                 </Button>
-                <Button
+                {/* <Button
                   variant="ghost"
                   className="w-full justify-between hover:text-green-500 hover:bg-green-50"
+                  onClick={() => {
+
+                  }}
                 >
-                  Update
-                  <Pencil1Icon className="h-[1.2rem] w-[1.2rem]" />
-                </Button>
+                  Update */}
+                {/* <Pencil1Icon className="h-[1.2rem] w-[1.2rem]" /> */}
+                {/* </Button>
                 <Button
                   variant="ghost"
                   className="w-full justify-between hover:text-yellow-500 hover:bg-yellow-50"
                 >
                   Favorites
                   <StarIcon className="h-[1.2rem] w-[1.2rem]" />
-                </Button>
+                </Button> */}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
