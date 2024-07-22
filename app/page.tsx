@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Dnd Todo List</h1>
+        <h1 className="text-3xl font-bold">Drag and Drop Todo List</h1>
         <Button>
-          <a href="">
+          <a href="https://github.com/mondeep31/dnd-todo-list">
             <GitHubLogoIcon />
           </a>
         </Button>

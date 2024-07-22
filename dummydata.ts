@@ -1,37 +1,36 @@
 import { TaskMap } from "./types/types";
-
 export const initialState: TaskMap = {
     Pending: [
       {
         id: "1",
-        task: "Learn React",
+        task: "Leetcode",
         description: "Description with some more text here",
-        tag: "Low",
-        date: "Sun Oct 22 2023",
+        tag: "DSA",
+        date: "Mon July 22 2024",
       },
       {
         id: "2",
         task: "Build a To-Do App",
         description: "Description with some more text here",
-        tag: "Low",
-        date: "Sun Oct 22 2023",
+        tag: "Mid",
+        date: "Mon July 22 2024",
       },
       {
         id: "3",
-        task: "Review CSS Modules",
+        task: "Learn Dev",
         description: "Description with some more text here",
-        tag: "Low",
-        date: "Sun Oct 22 2023",
+        tag: "High",
+        date: "Mon July 22 2024",
       },
     ],
     Ongoing: [],
     Done: [
       {
         id: "4",
-        task: "Get a Job",
+        task: "Get an internship",
         description: "Description with some more text here",
         tag: "High",
-        date: "2023-10-23",
+        date: "Mon July 22 2024",
       },
     ],
   };
