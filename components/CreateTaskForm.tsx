@@ -76,7 +76,7 @@ export default function CreateTaskForm({
                     <FormLabel>Title</FormLabel>
                     <FormMessage className="w-full" />
                     <FormControl>
-                      <Input autoFocus placeholder="Enter a task" {...field} />
+                      <Input placeholder="Enter a task" {...field} />
                     </FormControl>
                   </FormItem>
                 )}
